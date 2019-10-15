@@ -2,7 +2,7 @@ var Discord = require('discord.js');
 var client = new Discord.Client();
 client.on('ready',()=>{
 console.log(`Logged in!`)})
-let prefix='$'
+let prefix='-'
 client.on('message',message=>{
 if(message.content.startsWith(prefix+'join')){
 let room = message.guild.channels.get(`${message.content.split(" ").slice(1).join(" ")}`)
